@@ -18,8 +18,17 @@ public class WarehouseState extends State implements Cloneable {
     private int steps;
 
     public WarehouseState(int[][] matrix) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        this.matrix = new int[matrix.length][matrix.length];
+
+        for (int i = 0; i < matrix.length; i++) { // para cada linha
+            for (int j = 0; j < matrix.length; j++) { // para cada coluna
+                this.matrix[i][j] = matrix[i][j]; // o valor da matrix atributo é igual ao valor da matriz argument
+                if (this.matrix[i][j] == 1) {
+                    lineExit = i;
+                    columnExit = j;
+                }
+            }
+        }
     }
 
     public void executeAction(Action action) {

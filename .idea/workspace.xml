@@ -5,9 +5,64 @@
       <artifact name="ProjWarehouse:jar" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac04bfec-7f60-42eb-9fae-b904b9702de2" name="Default" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="ac04bfec-7f60-42eb-9fae-b904b9702de2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Agent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Problem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Problem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/Experiment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/Experiment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentsFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentsFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GeneticAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GeneticAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Population.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/selectionMethods/Tournament.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/selectionMethods/Tournament.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelAtributesValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelAtributesValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelParameters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelParameters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/AStarSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/AStarSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/GraphSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/GraphSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestAverage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestAverage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestInRun.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestInRun.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/FileOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/FileOperations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/Maths.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/Maths.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Cell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseAgentSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseAgentSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseExperimentsFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseExperimentsFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseIndividual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseIndividual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehouse/WarehouseAgentSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehouse/WarehouseAgentSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehouse/WarehouseIndividual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehouse/WarehouseIndividual.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,17 +79,27 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Z2QalNdXW1cSrXSILuRYfog3rS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="projwarehouse" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554909134647" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjWarehouse_TODO_res" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15527344" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -52,18 +117,6 @@
       <recent name="C:\Users\AlexandrinoJoséMarqu\Desktop\projeto IA\ProjSnake\src\catchAI" />
       <recent name="C:\Users\AlexandrinoJoséMarqu\Desktop\projeto IA\ProjSnake\src" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -85,7 +138,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
       <option name="vmParameters" />
       <option name="alternativeJrePath" />
@@ -156,6 +209,56 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="448" y="118" key="#Project_Structure" timestamp="1585348085573">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="448" y="118" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1585348085573" />
+    <state width="1866" height="283" key="GridCell.Tab.0.bottom" timestamp="1586176915707">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586176915707" />
+    <state width="1866" height="283" key="GridCell.Tab.0.center" timestamp="1586176915707">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="283" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586176915707" />
+    <state width="1866" height="283" key="GridCell.Tab.0.left" timestamp="1586176915706">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="283" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586176915706" />
+    <state width="1866" height="283" key="GridCell.Tab.0.right" timestamp="1586176915707">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="283" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586176915707" />
+    <state width="1866" height="350" key="GridCell.Tab.1.bottom" timestamp="1585348425313">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="350" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1585348425313" />
+    <state width="1866" height="350" key="GridCell.Tab.1.center" timestamp="1585348425312">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="350" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1585348425312" />
+    <state width="1866" height="350" key="GridCell.Tab.1.left" timestamp="1585348425311">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="350" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1585348425311" />
+    <state width="1866" height="350" key="GridCell.Tab.1.right" timestamp="1585348425312">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="350" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1585348425312" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />

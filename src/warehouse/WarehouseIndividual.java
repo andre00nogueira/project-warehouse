@@ -27,7 +27,7 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         throw new UnsupportedOperationException("Not implemented yet.");
     }
 
-    //Returns the product Id if the shelf in cell [line, column] has some product and 0 otherwise
+    //Return the product Id if the shelf in cell [line, column] has some product and 0 otherwise
     public int getProductInShelf(int line, int column){
         //TODO
         throw new UnsupportedOperationException("Not implemented yet.");

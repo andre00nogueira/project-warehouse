@@ -75,6 +75,7 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public void moveLeft() {
+        // Remove one unit from the col where agent is
         --columnAgent;
     }
 

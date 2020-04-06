@@ -81,8 +81,12 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public void setCellAgent(int line, int column) {
-        lineAgent = line;
-        columnAgent = column;
+        if (line < matrix.length && column < matrix.length && line > -1 && column > -1){
+            if (matrix[line][column] == 0){
+                lineAgent = line;
+                columnAgent = column;
+            }
+        }
     }
 
     public int getSteps() {

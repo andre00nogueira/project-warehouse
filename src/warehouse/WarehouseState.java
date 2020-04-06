@@ -63,23 +63,19 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public void moveUp() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        --lineAgent;
     }
 
     public void moveRight() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        ++columnAgent;
     }
 
     public void moveDown() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        ++lineAgent;
     }
 
     public void moveLeft() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        --columnAgent;
     }
 
     public void setCellAgent(int line, int column) {

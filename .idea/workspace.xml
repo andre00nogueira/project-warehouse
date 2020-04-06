@@ -25,43 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac04bfec-7f60-42eb-9fae-b904b9702de2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Agent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Problem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Problem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/Experiment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/Experiment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentsFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentsFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GeneticAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GeneticAlgorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Population.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/selectionMethods/Tournament.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/selectionMethods/Tournament.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelAtributesValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelAtributesValue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelParameters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelParameters.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/AStarSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/AStarSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/GraphSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/GraphSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestAverage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestAverage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestInRun.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestInRun.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/FileOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/FileOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/Maths.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/Maths.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseAgentSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseAgentSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseExperimentsFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseExperimentsFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseIndividual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseIndividual.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehouse/WarehouseAgentSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehouse/WarehouseAgentSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehouse/WarehouseIndividual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehouse/WarehouseIndividual.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,22 +191,26 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="448" y="118" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1585348085573" />
-    <state width="1866" height="283" key="GridCell.Tab.0.bottom" timestamp="1586176915707">
+    <state x="748" y="298" key="FileChooserDialogImpl" timestamp="1586183100618">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1866" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586176915707" />
-    <state width="1866" height="283" key="GridCell.Tab.0.center" timestamp="1586176915707">
+    <state x="748" y="298" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1586183100618" />
+    <state width="1866" height="283" key="GridCell.Tab.0.bottom" timestamp="1586182897105">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1866" height="283" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586176915707" />
-    <state width="1866" height="283" key="GridCell.Tab.0.left" timestamp="1586176915706">
+    <state width="1866" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586182897105" />
+    <state width="1866" height="283" key="GridCell.Tab.0.center" timestamp="1586182897103">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1866" height="283" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586176915706" />
-    <state width="1866" height="283" key="GridCell.Tab.0.right" timestamp="1586176915707">
+    <state width="1866" height="283" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586182897103" />
+    <state width="1866" height="283" key="GridCell.Tab.0.left" timestamp="1586182897102">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1866" height="283" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586176915707" />
+    <state width="1866" height="283" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586182897102" />
+    <state width="1866" height="283" key="GridCell.Tab.0.right" timestamp="1586182897104">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="283" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586182897104" />
     <state width="1866" height="350" key="GridCell.Tab.1.bottom" timestamp="1585348425313">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

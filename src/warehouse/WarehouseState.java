@@ -47,19 +47,19 @@ public class WarehouseState extends State implements Cloneable {
 
 
     public boolean canMoveUp() {
-        return lineAgent!=0 && matrix[lineAgent-1][columnAgent]==0;
+        return lineAgent != 0 && matrix[lineAgent - 1][columnAgent] == 0;
     }
 
     public boolean canMoveRight() {
-        return columnAgent!=matrix.length-1 && matrix[lineAgent][columnAgent+1]==0;
+        return columnAgent != matrix.length - 1 && matrix[lineAgent][columnAgent + 1] == 0;
     }
 
     public boolean canMoveDown() {
-        return lineAgent!=matrix.length-1 && matrix[lineAgent+1][columnAgent]==0;
+        return lineAgent != matrix.length - 1 && matrix[lineAgent + 1][columnAgent] == 0;
     }
 
     public boolean canMoveLeft() {
-        return columnAgent!=0 && matrix[lineAgent][columnAgent-1]==0;
+        return columnAgent != 0 && matrix[lineAgent][columnAgent - 1] == 0;
     }
 
     public void moveUp() {
@@ -81,8 +81,8 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public void setCellAgent(int line, int column) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        lineAgent = line;
+        columnAgent = column;
     }
 
     public int getSteps() {

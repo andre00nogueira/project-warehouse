@@ -71,6 +71,7 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public void moveDown() {
+        // Add one unit to the line where agent is
         ++lineAgent;
     }
 

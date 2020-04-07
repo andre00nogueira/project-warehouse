@@ -44,42 +44,67 @@ public class WarehouseState extends State implements Cloneable {
 
 
     public boolean canMoveUp() {
+        // Para se poder mover para cima...
+        // A linha do agente tem que ser diferente de 0, pois não pode ir para a linha -1
+        // E a matrix na posição do agente uma linha acima tem que ser 0...
+        // Pois se não for 0 e for outro número qualquer, indica que a célula é uma porta ou uma prateleira
         return lineAgent != 0 && matrix[lineAgent - 1][columnAgent] == 0;
     }
 
     public boolean canMoveRight() {
+        // Para se poder mover para a direita...
+        // A coluna do agente tem que ser diferente do tamanho da matrix, senão iria passar do tamanho da matrix
+        // E a matrix na posição do agente uma coluna à direita tem que ser 0...
+        // Pois se não for 0 e for outro número qualquer, indica que a célula é uma porta ou uma prateleira
         return columnAgent != matrix.length - 1 && matrix[lineAgent][columnAgent + 1] == 0;
     }
 
     public boolean canMoveDown() {
+        // Para se poder mover para baixo...
+        // A linha do agente tem que ser diferente do tamanho da matrix, senão iria passar do tamanho da matrix
+        // E a matrix na posição do agente uma linha para baixo tem que ser 0...
+        // Pois se não for 0 e for outro número qualquer, indica que a célula é uma porta ou uma prateleira
         return lineAgent != matrix.length - 1 && matrix[lineAgent + 1][columnAgent] == 0;
     }
 
     public boolean canMoveLeft() {
+        // Para se poder mover para a esquerda...
+        // A coluna do agente tem que ser diferente de 0, senão iria passar a ser -1
+        // E a matrix na posição do agente uma coluna à esquerda tem que ser 0...
+        // Pois se não for 0 e for outro número qualquer, indica que a célula é uma porta ou uma prateleira
         return columnAgent != 0 && matrix[lineAgent][columnAgent - 1] == 0;
     }
 
     public void moveUp() {
+        // Coloca a célula onde o agente estava como EMPTY
+        // E a célula onde o agente passa a estar como AGENT
         matrix[lineAgent--][columnAgent] = Properties.EMPTY;
         matrix[lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void moveRight() {
+        // Coloca a célula onde o agente estava como EMPTY
+        // E a célula onde o agente passa a estar como AGENT
         matrix[lineAgent][columnAgent++] = Properties.EMPTY;
         matrix[lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void moveDown() {
+        // Coloca a célula onde o agente estava como EMPTY
+        // E a célula onde o agente passa a estar como AGENT
         matrix[lineAgent++][columnAgent] = Properties.EMPTY;
         matrix[lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void moveLeft() {
+        // Coloca a célula onde o agente estava como EMPTY
+        // E a célula onde o agente passa a estar como AGENT
         matrix[lineAgent][columnAgent--] = Properties.EMPTY;
         matrix[lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void setCellAgent(int line, int column) {
+        // Recebe a linha e coloca para colocar o agente nessas coordenadas
         if (line < matrix.length && column < matrix.length && line > -1 && column > -1) {
             if (matrix[line][column] == 0) {
                 lineAgent = line;
@@ -183,23 +208,15 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public boolean hasThisCellClose(Cell cell) {
+        // Se a célula for nula (por alguma razão) então não é um goal
+        if (cell == null){
+            return false;
+        }
+        // Coluna à esquerda do agente...
         int column = columnAgent - 1;
-        if (column >= 0 && column == cell.getColumn() && lineAgent == cell.getLine()) {
-            return true;
-        }
-        column = columnAgent + 1;
-        if (column < matrix.length && column == cell.getColumn() && lineAgent == cell.getLine()) {
-            return true;
-        }
-        int line = lineAgent - 1;
-        if (line >= 0 && line == cell.getLine() && columnAgent == cell.getColumn()) {
-            return true;
-        }
-        line = lineAgent + 1;
-        if (line < matrix.length && line == cell.getLine() && columnAgent == cell.getColumn()) {
-            return true;
-        }
-        return false;
+        // Caso seja válida, é porque o agente está na prateleira certa...
+        // Senão é porque ainda não está
+        return column >= 0 && column == cell.getColumn() && lineAgent == cell.getLine();
     }
 
     public double computeTileDistance(Cell cell) {

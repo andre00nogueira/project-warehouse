@@ -183,4 +183,24 @@ public class WarehouseState extends State implements Cloneable {
         }
     }
 
+    public boolean hasThisCellClose(Cell cell){
+        int line=lineAgent-1;
+        if(line>=0 && line==cell.getLine() && columnAgent==cell.getColumn()){
+            return true;
+        }
+        line=lineAgent+1;
+        if(line<matrix.length && line==cell.getLine() && columnAgent==cell.getColumn()){
+            return true;
+        }
+        int column=columnAgent-1;
+        if(column>=0 && column==cell.getColumn() && lineAgent==cell.getLine()){
+            return true;
+        }
+        column=columnAgent+1;
+        if(column<matrix.length && column==cell.getColumn() && lineAgent==cell.getLine()){
+            return true;
+        }
+        return false;
+    }
+
 }

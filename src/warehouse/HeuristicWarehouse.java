@@ -5,13 +5,11 @@ import agentSearch.Heuristic;
 public class HeuristicWarehouse extends Heuristic<WarehouseProblemForSearch, WarehouseState> {
     @Override
     public double compute(WarehouseState state){
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        return state.computeTileDistance(problem.getGoalCell());
     }
 
     @Override
     public String toString(){
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        return "Distance to final cell";
     }
 }

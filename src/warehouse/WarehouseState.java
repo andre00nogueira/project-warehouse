@@ -29,20 +29,17 @@ public class WarehouseState extends State implements Cloneable {
                 }
             }
         }
+        steps = 0;
     }
 
     public void executeAction(Action action) {
         action.execute(this);
-        // TODO
-        throw new UnsupportedOperationException("Not implemented yet."); // delete after implementing
+        steps++;
     }
 
     public void executeActionSimulation(Action action) {
-        action.execute(this);
-        // TODO
-
+        executeAction(action);
         fireUpdatedEnvironment();
-        throw new UnsupportedOperationException("Not implemented yet."); // delete after implementing
     }
 
 
@@ -63,26 +60,28 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public void moveUp() {
-        --lineAgent;
+        matrix[lineAgent--][columnAgent] = Properties.EMPTY;
+        matrix[lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void moveRight() {
-        ++columnAgent;
+        matrix[lineAgent][columnAgent++] = Properties.EMPTY;
+        matrix[lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void moveDown() {
-        // Add one unit to the line where agent is
-        ++lineAgent;
+        matrix[lineAgent++][columnAgent] = Properties.EMPTY;
+        matrix[lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void moveLeft() {
-        // Remove one unit from the col where agent is
-        --columnAgent;
+        matrix[lineAgent][columnAgent--] = Properties.EMPTY;
+        matrix[lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void setCellAgent(int line, int column) {
-        if (line < matrix.length && column < matrix.length && line > -1 && column > -1){
-            if (matrix[line][column] == 0){
+        if (line < matrix.length && column < matrix.length && line > -1 && column > -1) {
+            if (matrix[line][column] == 0) {
                 lineAgent = line;
                 columnAgent = column;
             }
@@ -183,24 +182,27 @@ public class WarehouseState extends State implements Cloneable {
         }
     }
 
-    public boolean hasThisCellClose(Cell cell){
-        int line=lineAgent-1;
-        if(line>=0 && line==cell.getLine() && columnAgent==cell.getColumn()){
+    public boolean hasThisCellClose(Cell cell) {
+        int column = columnAgent - 1;
+        if (column >= 0 && column == cell.getColumn() && lineAgent == cell.getLine()) {
             return true;
         }
-        line=lineAgent+1;
-        if(line<matrix.length && line==cell.getLine() && columnAgent==cell.getColumn()){
+        column = columnAgent + 1;
+        if (column < matrix.length && column == cell.getColumn() && lineAgent == cell.getLine()) {
             return true;
         }
-        int column=columnAgent-1;
-        if(column>=0 && column==cell.getColumn() && lineAgent==cell.getLine()){
+        int line = lineAgent - 1;
+        if (line >= 0 && line == cell.getLine() && columnAgent == cell.getColumn()) {
             return true;
         }
-        column=columnAgent+1;
-        if(column<matrix.length && column==cell.getColumn() && lineAgent==cell.getLine()){
+        line = lineAgent + 1;
+        if (line < matrix.length && line == cell.getLine() && columnAgent == cell.getColumn()) {
             return true;
         }
         return false;
     }
 
+    public double computeTileDistance(Cell cell) {
+        return Math.abs((lineAgent + 1) - (cell.getLine()) + 1) + Math.abs((columnAgent) + 1) - (cell.getColumn() + 1);
+    }
 }

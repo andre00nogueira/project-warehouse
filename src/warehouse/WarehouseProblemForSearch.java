@@ -39,4 +39,8 @@ public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem
     public boolean isGoal(S state) {
         return state.hasThisCellClose(goalCell);
     }
+
+    public Cell getGoalCell() {
+        return goalCell;
+    }
 }

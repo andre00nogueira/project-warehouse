@@ -104,12 +104,10 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public void setCellAgent(int line, int column) {
-        // Recebe a linha e coloca para colocar o agente nessas coordenadas
+        // Recebe a linha e coluna e coloca para colocar o agente nessas coordenadas
         if (line < matrix.length && column < matrix.length && line > -1 && column > -1) {
-            if (matrix[line][column] == 0) {
                 lineAgent = line;
                 columnAgent = column;
-            }
         }
     }
 
@@ -189,6 +187,26 @@ public class WarehouseState extends State implements Cloneable {
         return new WarehouseState(matrix);
     }
 
+    public boolean hasThisCellClose(Cell cell) {
+        // Se a célula for nula (por alguma razão) então não é um goal
+        if (cell == null){
+            return false;
+        }
+        // Coluna à esquerda do agente...
+        int column = columnAgent - 1;
+        // Caso seja válida, é porque o agente está na prateleira certa...
+        // Senão é porque ainda não está
+        return column >= 0 && column == cell.getColumn() && lineAgent == cell.getLine();
+    }
+
+    public double computeTileDistance(Cell cell) {
+        return Math.abs((lineAgent + 1) - (cell.getLine()) + 1) + Math.abs((columnAgent) + 1) - (cell.getColumn() + 1);
+    }
+
+
+
+    // *** LISTENERS ***
+
     private final ArrayList<EnvironmentListener> listeners = new ArrayList<>();
 
     public synchronized void addEnvironmentListener(EnvironmentListener l) {
@@ -207,19 +225,4 @@ public class WarehouseState extends State implements Cloneable {
         }
     }
 
-    public boolean hasThisCellClose(Cell cell) {
-        // Se a célula for nula (por alguma razão) então não é um goal
-        if (cell == null){
-            return false;
-        }
-        // Coluna à esquerda do agente...
-        int column = columnAgent - 1;
-        // Caso seja válida, é porque o agente está na prateleira certa...
-        // Senão é porque ainda não está
-        return column >= 0 && column == cell.getColumn() && lineAgent == cell.getLine();
-    }
-
-    public double computeTileDistance(Cell cell) {
-        return Math.abs((lineAgent + 1) - (cell.getLine()) + 1) + Math.abs((columnAgent) + 1) - (cell.getColumn() + 1);
-    }
 }

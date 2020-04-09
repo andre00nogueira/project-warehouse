@@ -187,20 +187,9 @@ public class WarehouseState extends State implements Cloneable {
         return new WarehouseState(matrix);
     }
 
-    public boolean hasThisCellClose(Cell cell) {
-        // Se a célula for nula (por alguma razão) então não é um goal
-        if (cell == null){
-            return false;
-        }
-        // Coluna à esquerda do agente...
-        int column = columnAgent - 1;
-        // Caso seja válida, é porque o agente está na prateleira certa...
-        // Senão é porque ainda não está
-        return column >= 0 && column == cell.getColumn() && lineAgent == cell.getLine();
-    }
-
-    public double computeTileDistance(Cell cell) {
-        return Math.abs((lineAgent + 1) - (cell.getLine()) + 1) + Math.abs((columnAgent) + 1) - (cell.getColumn() + 1);
+    public double computeTileDistance(WarehouseState state) {
+        //calcula a distância em saltos até goalState
+        return Math.abs((lineAgent + 1) - (state.getLineAgent()) + 1) + Math.abs((columnAgent) + 1) - (state.getColumnAgent() + 1);
     }
 
 

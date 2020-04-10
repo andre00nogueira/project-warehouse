@@ -30,8 +30,6 @@ public class WarehouseState extends State implements Cloneable {
             }
         }
 
-        lineAgent = lineExit;
-        columnAgent = columnExit + 1;
         steps = 0;
     }
 

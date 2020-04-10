@@ -36,7 +36,10 @@ public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem
             if(action.isValid(state)){
                 //se for adiciona-a á lista de sucessores
                 WarehouseState sucessor = state.clone();
+                // O clone() apenas clona a matrix e a posição da porta
+                // Temos que, de seguida, que voltar a recolocar a posição do agente na nova matrix clonada
                 sucessor.setCellAgent(state.getLineAgent(), state.getColumnAgent());
+
                 action.execute(sucessor);
                 sucessors.add(sucessor);
             }

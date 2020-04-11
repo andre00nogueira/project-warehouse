@@ -9,7 +9,6 @@ import java.util.List;
 
 public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem<S> {
 
-    //TODO this class might require the definition of additional methods and/or attributes
     private WarehouseState goalState;
     private List<Action> actions;
 
@@ -34,12 +33,8 @@ public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem
         for (Action action : actions) {
             //verifica se a ação é válida
             if(action.isValid(state)){
-                //se for adiciona-a á lista de sucessores
+                //se for faz clone e adiciona-a á lista de sucessores
                 WarehouseState sucessor = state.clone();
-                // O clone() apenas clona a matrix e a posição da porta
-                // Temos que, de seguida, que voltar a recolocar a posição do agente na nova matrix clonada
-                sucessor.setCellAgent(state.getLineAgent(), state.getColumnAgent());
-
                 action.execute(sucessor);
                 sucessors.add(sucessor);
             }
@@ -48,7 +43,7 @@ public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem
     }
 
     public boolean isGoal(S state) {
-        // return state.equals(goalState)
+        //vê se o agente já se encontra na célula final
         return state.getLineAgent() == goalState.getLineAgent() && state.getColumnAgent() == goalState.getColumnAgent();
     }
 

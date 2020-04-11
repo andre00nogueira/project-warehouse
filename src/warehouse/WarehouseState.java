@@ -9,8 +9,6 @@ import java.util.Arrays;
 
 public class WarehouseState extends State implements Cloneable {
 
-    //TODO this class might require the definition of additional methods and/or attributes
-
     private int[][] matrix;
     private int lineAgent, columnAgent;
     private int lineExit;
@@ -24,13 +22,28 @@ public class WarehouseState extends State implements Cloneable {
             for (int j = 0; j < matrix.length; j++) { // para cada coluna
                 this.matrix[i][j] = matrix[i][j]; // o valor da matrix atributo é igual ao valor da matriz argument
                 if (this.matrix[i][j] == 1) {
-                    lineExit = i;
-                    columnExit = j;
+                    lineExit =i;
+                    columnExit= j;
                 }
             }
         }
-
         steps = 0;
+    }
+    //construtor usado para clone
+    public WarehouseState(int[][] matrix,Cell cellExit,Cell cellAgent,int steps){
+        this.matrix = new int[matrix.length][matrix.length];
+
+        for (int i = 0; i < matrix.length; i++) { // para cada linha
+            for (int j = 0; j < matrix.length; j++) { // para cada coluna
+                this.matrix[i][j] = matrix[i][j]; // o valor da matrix atributo é igual ao valor da matriz argument
+            }
+        }
+        //faz update aos resto das variáveis
+        this.lineExit=cellExit.getLine();
+        this.columnExit=cellExit.getColumn();
+        this.lineAgent=cellAgent.getLine();
+        this.columnAgent=cellAgent.getColumn();
+        this.steps = steps;
     }
 
     public void executeAction(Action action) {
@@ -107,8 +120,9 @@ public class WarehouseState extends State implements Cloneable {
     public void setCellAgent(int line, int column) {
         // Recebe a linha e coluna e coloca para colocar o agente nessas coordenadas
         if (line < matrix.length && column < matrix.length && line > -1 && column > -1) {
-                lineAgent = line;
-                columnAgent = column;
+            lineAgent = line;
+            columnAgent = column;
+            matrix[lineAgent][columnAgent] = Properties.AGENT;
         }
     }
 
@@ -185,14 +199,13 @@ public class WarehouseState extends State implements Cloneable {
 
     @Override
     public WarehouseState clone() {
-        return new WarehouseState(matrix);
+        return new WarehouseState(matrix,new Cell(lineExit,columnExit),new Cell(lineAgent,columnAgent),steps);
     }
 
     public double computeTileDistance(WarehouseState state) {
         //calcula a distância em saltos até goalState
         return Math.abs((lineAgent + 1) - (state.getLineAgent()) + 1) + Math.abs((columnAgent) + 1) - (state.getColumnAgent() + 1);
     }
-
 
 
     // *** LISTENERS ***

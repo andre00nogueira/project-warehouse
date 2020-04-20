@@ -23,7 +23,7 @@ public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem
 
         //inicializa o goalState como o estado inicial
         goalState= new WarehouseState(initialWarehouseState.getMatrix());
-        //mete o agente uuma célula á direita do objetivo final
+        //mete o agente uma célula á direita do objetivo final
         goalState.setCellAgent(goalPosition.getLine(),goalPosition.getColumn()+1);
     }
 

@@ -36,6 +36,10 @@ public class WarehouseState extends State implements Cloneable {
         for (int i = 0; i < matrix.length; i++) { // para cada linha
             for (int j = 0; j < matrix.length; j++) { // para cada coluna
                 this.matrix[i][j] = matrix[i][j]; // o valor da matrix atributo é igual ao valor da matriz argument
+                if (this.matrix[i][j] == 1) {
+                    lineExit =i;
+                    columnExit= j;
+                }
             }
         }
         //faz update aos resto das variáveis
@@ -120,6 +124,7 @@ public class WarehouseState extends State implements Cloneable {
     public void setCellAgent(int line, int column) {
         // Recebe a linha e coluna e coloca para colocar o agente nessas coordenadas
         if (line < matrix.length && column < matrix.length && line > -1 && column > -1) {
+            matrix[lineExit][columnExit] = Properties.EMPTY;
             lineAgent = line;
             columnAgent = column;
             matrix[lineAgent][columnAgent] = Properties.AGENT;

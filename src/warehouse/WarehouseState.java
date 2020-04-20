@@ -22,31 +22,28 @@ public class WarehouseState extends State implements Cloneable {
             for (int j = 0; j < matrix.length; j++) { // para cada coluna
                 this.matrix[i][j] = matrix[i][j]; // o valor da matrix atributo é igual ao valor da matriz argument
                 if (this.matrix[i][j] == 1) {
-                    lineExit =i;
-                    columnExit= j;
+                    lineExit = lineAgent = i;
+                    columnExit = columnAgent = j;
                 }
             }
         }
         steps = 0;
     }
+
     //construtor usado para clone
-    public WarehouseState(int[][] matrix,Cell cellExit,Cell cellAgent,int steps){
+    public WarehouseState(int[][] matrix, Cell cellExit, Cell cellAgent, int steps) {
         this.matrix = new int[matrix.length][matrix.length];
 
         for (int i = 0; i < matrix.length; i++) { // para cada linha
             for (int j = 0; j < matrix.length; j++) { // para cada coluna
                 this.matrix[i][j] = matrix[i][j]; // o valor da matrix atributo é igual ao valor da matriz argument
-                if (this.matrix[i][j] == 1) {
-                    lineExit =i;
-                    columnExit= j;
-                }
             }
         }
         //faz update aos resto das variáveis
-        this.lineExit=cellExit.getLine();
-        this.columnExit=cellExit.getColumn();
-        this.lineAgent=cellAgent.getLine();
-        this.columnAgent=cellAgent.getColumn();
+        this.lineExit = cellExit.getLine();
+        this.columnExit = cellExit.getColumn();
+        this.lineAgent = cellAgent.getLine();
+        this.columnAgent = cellAgent.getColumn();
         this.steps = steps;
     }
 
@@ -204,7 +201,7 @@ public class WarehouseState extends State implements Cloneable {
 
     @Override
     public WarehouseState clone() {
-        return new WarehouseState(matrix,new Cell(lineExit,columnExit),new Cell(lineAgent,columnAgent),steps);
+        return new WarehouseState(matrix, new Cell(lineExit, columnExit), new Cell(lineAgent, columnAgent), steps);
     }
 
     public double computeTileDistance(WarehouseState state) {

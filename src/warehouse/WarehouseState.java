@@ -63,7 +63,7 @@ public class WarehouseState extends State implements Cloneable {
         // A linha do agente tem que ser diferente de 0, pois não pode ir para a linha -1
         // E a matrix na posição do agente uma linha acima tem que ser 0...
         // Pois se não for 0 e for outro número qualquer, indica que a célula é uma porta ou uma prateleira
-        return lineAgent != 0 && matrix[lineAgent - 1][columnAgent] == 0;
+        return lineAgent != 0 && matrix[lineAgent - 1][columnAgent] == Properties.EMPTY;
     }
 
     public boolean canMoveRight() {
@@ -71,7 +71,7 @@ public class WarehouseState extends State implements Cloneable {
         // A coluna do agente tem que ser diferente do tamanho da matrix, senão iria passar do tamanho da matrix
         // E a matrix na posição do agente uma coluna à direita tem que ser 0...
         // Pois se não for 0 e for outro número qualquer, indica que a célula é uma porta ou uma prateleira
-        return columnAgent != matrix.length - 1 && matrix[lineAgent][columnAgent + 1] == 0;
+        return columnAgent != matrix.length - 1 && matrix[lineAgent][columnAgent + 1] == Properties.EMPTY;
     }
 
     public boolean canMoveDown() {
@@ -79,7 +79,7 @@ public class WarehouseState extends State implements Cloneable {
         // A linha do agente tem que ser diferente do tamanho da matrix, senão iria passar do tamanho da matrix
         // E a matrix na posição do agente uma linha para baixo tem que ser 0...
         // Pois se não for 0 e for outro número qualquer, indica que a célula é uma porta ou uma prateleira
-        return lineAgent != matrix.length - 1 && matrix[lineAgent + 1][columnAgent] == 0;
+        return lineAgent != matrix.length - 1 && matrix[lineAgent + 1][columnAgent] == Properties.EMPTY;
     }
 
     public boolean canMoveLeft() {
@@ -87,7 +87,7 @@ public class WarehouseState extends State implements Cloneable {
         // A coluna do agente tem que ser diferente de 0, senão iria passar a ser -1
         // E a matrix na posição do agente uma coluna à esquerda tem que ser 0...
         // Pois se não for 0 e for outro número qualquer, indica que a célula é uma porta ou uma prateleira
-        return columnAgent != 0 && matrix[lineAgent][columnAgent - 1] == 0;
+        return columnAgent != 0 && matrix[lineAgent][columnAgent - 1] == Properties.EMPTY;
     }
 
     public void moveUp() {

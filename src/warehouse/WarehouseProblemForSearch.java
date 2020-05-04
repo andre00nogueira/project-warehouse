@@ -22,17 +22,17 @@ public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem
         actions.add(new ActionDown());
 
         //inicializa o goalState como o estado inicial
-        goalState= new WarehouseState(initialWarehouseState.getMatrix());
+        goalState = new WarehouseState(initialWarehouseState.getMatrix());
         //mete o agente uma célula á direita do objetivo final
-        goalState.setCellAgent(goalPosition.getLine(),goalPosition.getColumn()+1);
+        goalState.setCellAgent(goalPosition.getLine(), goalPosition.getColumn() + 1);
     }
 
     @Override
     public List<S> executeActions(S state) {
-        List<WarehouseState> sucessors= new LinkedList<>();
+        List<WarehouseState> sucessors = new LinkedList<>();
         for (Action action : actions) {
             //verifica se a ação é válida
-            if(action.isValid(state)){
+            if (action.isValid(state)) {
                 //se for faz clone e adiciona-a á lista de sucessores
                 WarehouseState sucessor = state.clone();
                 action.execute(sucessor);

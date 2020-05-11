@@ -4,11 +4,13 @@ import ga.IntVectorIndividual;
 
 public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemForGA, WarehouseIndividual> {
 
+    private int productId;
+
     //TODO this class might require the definition of additional methods and/or attributes
 
     public WarehouseIndividual(WarehouseProblemForGA problem, int size) {
         super(problem, size);
-        //TODO
+        //shelf = new int[]
         throw new UnsupportedOperationException("Not implemented yet.");
     }
 
@@ -23,13 +25,17 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     }
 
     public static int getShelfPos(int[] genome, int value) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        for (int i = 0; i < genome.length; i++) {
+            if (genome[i] == value){
+                return i;
+            }
+        }
+        return -1;
     }
 
     //Return the product Id if the shelf in cell [line, column] has some product and 0 otherwise
     public int getProductInShelf(int line, int column){
-        //TODO
+
         throw new UnsupportedOperationException("Not implemented yet.");
     }
 

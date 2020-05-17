@@ -46,7 +46,8 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
             pathCost += problem.getPair(problem.getShelves().get(getShelfPos(genome, requestUnico[0])), problem.getDoor()).getValue();
             pathCost += problem.getPair(problem.getDoor(), problem.getShelves().get(getShelfPos(genome, requestUnico[requestUnico.length - 1]))).getValue();
         }
-        return 1/pathCost;
+        fitness = 1.0/pathCost;
+        return fitness;
     }
 
     public static int getShelfPos(int[] genome, int value) {

@@ -49,8 +49,10 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     }
 
     public Pair getPair(Cell first, Cell second) {
+
         for (Pair pair : pairs) {
-            if ((pair.getCell1() == first && pair.getCell2() == second) || (pair.getCell1() == second && pair.getCell2() == first)) {
+            if (pair.getCell1().equals(first) && pair.getCell2().equals(second) || pair.getCell1().equals(second) && pair.getCell2().equals(first)){
+            //if ((pair.getCell1() == first && pair.getCell2() == second) || (pair.getCell1() == second && pair.getCell2() == first)) {
                 return pair;
             }
         }

@@ -4,6 +4,7 @@ import ga.IntVectorIndividual;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Random;
 
 public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemForGA, WarehouseIndividual> {
 
@@ -13,6 +14,11 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     public WarehouseIndividual(WarehouseProblemForGA problem, int size) {
         super(problem, size);
         pathCost = 0;
+        //criar o genoma para o individuo
+        int[] shelvesWithProduct = new Random().ints(0, problem.getShelves().size()).distinct().limit(problem.getNumProducts()).toArray();
+        for (int i = 0; i < problem.getNumProducts(); i++) {
+            setGene(shelvesWithProduct[i],i+1);
+        }
     }
 
     public WarehouseIndividual(WarehouseIndividual original) {
@@ -35,19 +41,19 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
                     int second = getShelfPos(genome, requestUnico[j]);
                     Cell firstCell = problem.getShelves().get(first);
                     Cell secondCell = problem.getShelves().get(second);
-                    pathCost += problem.getPairs(firstCell, secondCell).getValue();
+                    pathCost += problem.getPair(firstCell, secondCell).getValue();
                 }
             }
             //adiciona ainda a distância da porta ao primeiro e do ultimo á porta
-            pathCost += problem.getPairs(problem.getShelves().get(getShelfPos(genome, requestUnico[0])), problem.getDoor()).getValue();
-            pathCost += problem.getPairs(problem.getDoor(), problem.getShelves().get(getShelfPos(genome, requestUnico[requestUnico.length - 1]))).getValue();
+            pathCost += problem.getPair(problem.getShelves().get(getShelfPos(genome, requestUnico[0])), problem.getDoor()).getValue();
+            pathCost += problem.getPair(problem.getDoor(), problem.getShelves().get(getShelfPos(genome, requestUnico[requestUnico.length - 1]))).getValue();
         }
-        return pathCost;
+        return 1/pathCost;
     }
 
     public static int getShelfPos(int[] genome, int value) {
         //procura o value no genoma
-        for (int i : genome) {
+        for (int i=0; i<genome.length ;i++) {
             if (genome[i] == value) {
                 return i;
             }

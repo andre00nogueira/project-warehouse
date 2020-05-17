@@ -25,6 +25,9 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         for (Request request : requests) {
             //Para cada Request
             int[] requestUnico = request.getRequest();
+            for (Cell shelve : problem.getShelves()) {
+
+            }
             //vê as distâncias entre cada um dos produtos a ser recolhidos e adiciona ao pathCost
             for (int i = 0; i < requestUnico.length - 1; i++) {
                 for (int j = i + 1; j < requestUnico.length; j++) {

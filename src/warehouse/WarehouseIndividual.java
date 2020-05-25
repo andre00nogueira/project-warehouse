@@ -1,10 +1,10 @@
 package warehouse;
 
+import ga.GeneticAlgorithm;
 import ga.IntVectorIndividual;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Random;
 
 public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemForGA, WarehouseIndividual> {
 
@@ -15,9 +15,9 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         super(problem, size);
         pathCost = 0;
         //criar o genoma para o individuo
-        int[] shelvesWithProduct = new Random().ints(0, problem.getShelves().size()).distinct().limit(problem.getNumProducts()).toArray();
+        int[] shelvesWithProduct = GeneticAlgorithm.random.ints(0, problem.getShelves().size()).distinct().limit(problem.getNumProducts()).toArray();
         for (int i = 0; i < problem.getNumProducts(); i++) {
-            setGene(shelvesWithProduct[i],i+1);
+            setGene(shelvesWithProduct[i], i + 1);
         }
     }
 
@@ -46,13 +46,13 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
             pathCost += problem.getPair(problem.getShelves().get(getShelfPos(genome, requestUnico[0])), problem.getDoor()).getValue();
             pathCost += problem.getPair(problem.getDoor(), problem.getShelves().get(getShelfPos(genome, requestUnico[requestUnico.length - 1]))).getValue();
         }
-        fitness = 1.0/pathCost;
+        fitness = pathCost;
         return fitness;
     }
 
     public static int getShelfPos(int[] genome, int value) {
         //procura o value no genoma
-        for (int i=0; i<genome.length ;i++) {
+        for (int i = 0; i < genome.length; i++) {
             if (genome[i] == value) {
                 return i;
             }

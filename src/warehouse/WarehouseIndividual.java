@@ -5,7 +5,6 @@ import ga.IntVectorIndividual;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Random;
 
 public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemForGA, WarehouseIndividual> {
 
@@ -49,8 +48,6 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
             pathCost += problem.getPair(problem.getShelves().get(getShelfPos(genome, requestUnico[0])), problem.getDoor()).getValue();
             pathCost += problem.getPair(problem.getDoor(), problem.getShelves().get(getShelfPos(genome, requestUnico[requestUnico.length - 1]))).getValue();
         }
-
-
         fitness = pathCost;
         return fitness;
     }

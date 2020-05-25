@@ -13,8 +13,6 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     private Cell door;
     private int numProducts;
 
-
-
     public WarehouseProblemForGA(WarehouseAgentSearch agentSearch) {
         requests = new ArrayList<>(agentSearch.getRequests());
         shelves = new LinkedList<>(agentSearch.getShelves());
@@ -50,7 +48,7 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
     public Pair getPair(Cell first, Cell second) {
         for (Pair pair : pairs) {
-            if ((pair.getCell1().equals(first) && pair.getCell2().equals(second)) || (pair.getCell1().equals(second) && pair.getCell2().equals(first))){
+            if (pair.getCell1().equals(first) && pair.getCell2().equals(second) || pair.getCell1().equals(second) && pair.getCell2().equals(first)){
                 return pair;
             }
         }
@@ -59,8 +57,15 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
     @Override
     public String toString() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        StringBuilder sb = new StringBuilder();
+        sb.append("# of products: ");
+        sb.append(numProducts);
+        sb.append("\n");
+        sb.append("Requests: ");
+        for (Request request : requests) {
+            sb.append(request);
+        }
+        return sb.toString();
     }
 
 }

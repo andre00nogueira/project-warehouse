@@ -1,5 +1,6 @@
 package warehouse;
 
+import ga.GeneticAlgorithm;
 import ga.IntVectorIndividual;
 
 import java.util.ArrayList;
@@ -15,9 +16,9 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         super(problem, size);
         pathCost = 0;
         //criar o genoma para o individuo
-        int[] shelvesWithProduct = new Random().ints(0, problem.getShelves().size()).distinct().limit(problem.getNumProducts()).toArray();
+        int[] shelvesWithProduct = GeneticAlgorithm.random.ints(0, problem.getShelves().size()).distinct().limit(problem.getNumProducts()).toArray();
         for (int i = 0; i < problem.getNumProducts(); i++) {
-            setGene(shelvesWithProduct[i],i+1);
+            setGene(shelvesWithProduct[i], i + 1);
         }
     }
 
@@ -39,20 +40,24 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
                     int second = getShelfPos(genome, requestUnico[j]);
                     Cell firstCell = problem.getShelves().get(first);
                     Cell secondCell = problem.getShelves().get(second);
-                    pathCost += problem.getPair(firstCell, secondCell).getValue();
+                    if (firstCell != secondCell) {
+                        pathCost += problem.getPair(firstCell, secondCell).getValue();
+                    }
                 }
             }
             //adiciona ainda a distância da porta ao primeiro e do ultimo á porta
             pathCost += problem.getPair(problem.getShelves().get(getShelfPos(genome, requestUnico[0])), problem.getDoor()).getValue();
             pathCost += problem.getPair(problem.getDoor(), problem.getShelves().get(getShelfPos(genome, requestUnico[requestUnico.length - 1]))).getValue();
         }
-        fitness = 1.0/pathCost;
+
+
+        fitness = pathCost;
         return fitness;
     }
 
     public static int getShelfPos(int[] genome, int value) {
         //procura o value no genoma
-        for (int i=0; i<genome.length ;i++) {
+        for (int i = 0; i < genome.length; i++) {
             if (genome[i] == value) {
                 return i;
             }

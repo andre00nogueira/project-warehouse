@@ -34,67 +34,40 @@ public class RecombinationOX<I extends IntVectorIndividual, P extends Problem<I>
 
         create_Segments(cut1, cut2, ind1, ind2);
 
+        crossOver(child1, ind2);
+        crossOver(child2, ind1);
+        
+    }
+
+
+    public void crossOver(int[] offspring, I ind) {
         for (int i = cut1; i < cut2; i++) {
-            child1[i] = segment1[i-cut1];
+            offspring[i] = segment1[i-cut1];
         }
 
         int i = 0;
         do {
             int j = 0;
-            while (checkDuplicates(child1, i)){
+            while (checkDuplicates(offspring, i)){
                 j++;
-                child1[i] = ind2.getGene(i+j);
+                offspring[i] = ind.getGene(i+j);
             }
             i++;
         }while (i < cut1);
 
-        System.out.println(child1);
 
         i = cut2;
         do{
             int j = 0;
-            child1[i] = ind2.getGene(i);
-            while (checkDuplicates(child1, i)){
-                child1[i] = ind2.getGene(j);
+            offspring[i] = ind.getGene(i);
+            while (checkDuplicates(offspring, i)){
+                offspring[i] = ind.getGene(j);
                 j++;
             }
             i++;
-        }while (i < ind2.getNumGenes());
-
-        System.out.println(child1);
-
-
-
-        for (i = cut1; i < cut2; i++) {
-            child2[i] = segment1[i-cut1];
-        }
-
-        i = 0;
-        do {
-            int j = 0;
-            while (checkDuplicates(child2, i)){
-                j++;
-                child2[i] = ind2.getGene(i+j);
-            }
-            i++;
-        }while (i < cut1);
-
-        System.out.println(child2);
-
-        i = cut2;
-        do{
-            int j = 0;
-            child2[i] = ind2.getGene(i);
-            while (checkDuplicates(child2, i)){
-                child2[i] = ind2.getGene(j);
-                j++;
-            }
-            i++;
-        }while (i < ind2.getNumGenes());
-
-
-
+        }while (i < ind.getNumGenes());
     }
+
 
 
     private boolean checkDuplicates(int[] offspring, int indexOfElement) {

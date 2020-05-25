@@ -45,7 +45,6 @@ public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
 
         while (!stopCondition(t)) {
             Population<I, P> populationAux = selection.run(population);
-            // TODO a seguinte linha de código causa LOOP INFINITO
             recombination.run(populationAux);
             mutation.run(populationAux);
             population =  populationAux;

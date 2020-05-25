@@ -13,11 +13,13 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
 
     public WarehouseIndividual(WarehouseProblemForGA problem, int size) {
         super(problem, size);
-        pathCost = 0;
-        //criar o genoma para o individuo
-        int[] shelvesWithProduct = GeneticAlgorithm.random.ints(0, problem.getShelves().size()).distinct().limit(problem.getNumProducts()).toArray();
-        for (int i = 0; i < problem.getNumProducts(); i++) {
-            setGene(shelvesWithProduct[i], i + 1);
+        pathCost=0;
+        int random;
+        for (int c = 0; c < size; c++) {
+            do {
+                random = GeneticAlgorithm.random.nextInt(size) ;
+            } while (genome[random]!=0);
+            genome[random]=c+1;
         }
     }
 

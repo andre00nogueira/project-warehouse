@@ -65,8 +65,8 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
             case "insert":
                 mutation = new MutationInsert<>(mutationProbability);
                 break;
-            case "TODO1": //TODO
-                mutation = new Mutation3<>(mutationProbability);
+            case "swap":
+                mutation = new MutationSwap<>(mutationProbability);
                 break;
             case "inversion":
                 mutation = new MutationInversion<>(mutationProbability);

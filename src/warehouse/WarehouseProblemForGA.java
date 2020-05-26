@@ -3,22 +3,27 @@ package warehouse;
 import ga.Problem;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
     private ArrayList<Request> requests;
     private LinkedList<Cell> shelves;
-    private LinkedList<Pair> pairs;
+    private HashMap<Integer, Pair> pairs;
     private Cell door;
     private int numProducts;
 
     public WarehouseProblemForGA(WarehouseAgentSearch agentSearch) {
         requests = new ArrayList<>(agentSearch.getRequests());
         shelves = new LinkedList<>(agentSearch.getShelves());
-        pairs = new LinkedList<>(agentSearch.getPairs());
         numProducts = agentSearch.getNumProducts();
         door = agentSearch.getExit();
+        pairs = new HashMap<Integer, Pair>();
+        for (int i = 0; i < agentSearch.getPairs().size(); i++) {
+            pairs.put(i, (Pair) agentSearch.getPairs().get(i));
+        }
+
     }
 
     @Override
@@ -34,7 +39,7 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         return shelves;
     }
 
-    public LinkedList<Pair> getPairs() {
+    public HashMap<Integer, Pair> getPairs() {
         return pairs;
     }
 
@@ -47,8 +52,9 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     }
 
     public Pair getPair(Cell first, Cell second) {
-        for (Pair pair : pairs) {
-            if (pair.getCell1().equals(first) && pair.getCell2().equals(second) || pair.getCell1().equals(second) && pair.getCell2().equals(first)){
+        for (int i = 0; i < pairs.size(); i++) {
+            Pair pair = pairs.get(i);
+            if (pair.getCell1().equals(first) && pair.getCell2().equals(second) || pair.getCell1().equals(second) && pair.getCell2().equals(first)) {
                 return pair;
             }
         }

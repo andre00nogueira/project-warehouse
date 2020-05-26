@@ -51,8 +51,8 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
             case "pmx":
                 recombination = new RecombinationPartialMapped<>(recombinationProbability);
                 break;
-            case "TODO1": //TODO
-                recombination = new Recombination3<>(recombinationProbability);
+            case "cx":
+                recombination = new RecombinationCX<>(recombinationProbability);
                 break;
             case "ox":
                 recombination = new RecombinationOX<>(recombinationProbability);

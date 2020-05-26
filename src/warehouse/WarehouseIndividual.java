@@ -15,6 +15,7 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         super(problem, size);
         pathCost=0;
         int random;
+
         for (int c = 0; c < size; c++) {
             do {
                 random = GeneticAlgorithm.random.nextInt(size) ;

@@ -10,7 +10,9 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
     private ArrayList<Request> requests;
     private LinkedList<Cell> shelves;
-    private HashMap<Integer, Pair> pairs;
+    //private HashMap<Integer, Pair> pairs;
+    private LinkedList<Pair> pairs;
+
     private Cell door;
     private int numProducts;
 
@@ -19,10 +21,11 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         shelves = new LinkedList<>(agentSearch.getShelves());
         numProducts = agentSearch.getNumProducts();
         door = agentSearch.getExit();
-        pairs = new HashMap<Integer, Pair>();
+        /*pairs = new HashMap<Integer, Pair>();
         for (int i = 0; i < agentSearch.getPairs().size(); i++) {
             pairs.put(i, (Pair) agentSearch.getPairs().get(i));
-        }
+        }*/
+        pairs = new LinkedList<>(agentSearch.getPairs());
 
     }
 
@@ -39,7 +42,11 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         return shelves;
     }
 
-    public HashMap<Integer, Pair> getPairs() {
+    /*public HashMap<Integer, Pair> getPairs() {
+        return pairs;
+    }*/
+
+    public LinkedList<Pair> getPairs() {
         return pairs;
     }
 
@@ -52,9 +59,11 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     }
 
     public Pair getPair(Cell first, Cell second) {
-        for (int i = 0; i < pairs.size(); i++) {
+        for (Pair pair : pairs) {
+            if (pair.getCell1().equals(first) && pair.getCell2().equals(second) || pair.getCell1().equals(second) && pair.getCell2().equals(first)){
+        /*for (int i = 0; i < pairs.size(); i++) {
             Pair pair = pairs.get(i);
-            if (pair.getCell1().equals(first) && pair.getCell2().equals(second) || pair.getCell1().equals(second) && pair.getCell2().equals(first)) {
+            if (pair.getCell1().equals(first) && pair.getCell2().equals(second) || pair.getCell1().equals(second) && pair.getCell2().equals(first)) {*/
                 return pair;
             }
         }

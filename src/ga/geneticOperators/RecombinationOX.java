@@ -16,7 +16,6 @@ public class RecombinationOX<I extends IntVectorIndividual, P extends Problem<I>
     }
 
 
-
     @Override
     public void recombine(I ind1, I ind2) {
         child1 = new int[ind1.getNumGenes()];
@@ -34,51 +33,51 @@ public class RecombinationOX<I extends IntVectorIndividual, P extends Problem<I>
 
         create_Segments(cut1, cut2, ind1, ind2);
 
-        crossOver(child1, ind2);
-        crossOver(child2, ind1);
-        
+        crossOver(child1, ind2, segment1);
+        crossOver(child2, ind1, segment2);
+
     }
 
 
-    public void crossOver(int[] offspring, I ind) {
+    public void crossOver(int[] offspring, I ind, int[] segment) {
         for (int i = cut1; i < cut2; i++) {
-            offspring[i] = segment1[i-cut1];
+            offspring[i] = segment[i - cut1];
         }
 
-        int i = 0;
-        do {
-            int j = 0;
-            while (checkDuplicates(offspring, i)){
-                j++;
-                offspring[i] = ind.getGene(i+j);
-            }
-            i++;
-        }while (i < cut1);
+        int[] segmentAux = new int[ind.getNumGenes() - (cut2 - cut1)];
+        int j = 0;
 
-
-        i = cut2;
-        do{
-            int j = 0;
-            offspring[i] = ind.getGene(i);
-            while (checkDuplicates(offspring, i)){
-                offspring[i] = ind.getGene(j);
+        // Copiar para um array os elementos do pai2 que não estão no filho
+        for (int i = 0; i < ind.getNumGenes(); i++) {
+            if (!check_Duplicates(offspring, ind.getGene(i))) {
+                segmentAux[j] = ind.getGene(i);
                 j++;
             }
-            i++;
-        }while (i < ind.getNumGenes());
+        }
+
+        // Copiar do pai 2, do 0 até ao cut1
+        int k = 0;
+        for (int i = 0; i < cut1; i++) {
+            offspring[i] = segmentAux[i];
+            k = i;
+        }
+
+        // Copiar do pai 2, do cut2 até ao tamanho do filho
+        for (int i = cut2; i < offspring.length; i++) {
+            offspring[i] = segmentAux[k];
+        }
+
     }
 
-
-
-    private boolean checkDuplicates(int[] offspring, int indexOfElement) {
+    private boolean check_Duplicates(int[] offspring, int gene) {
         for (int index = 0; index < offspring.length; index++) {
-            if ((offspring[index] == offspring[indexOfElement]) &&
-                    (indexOfElement != index)) {
+            if (offspring[index] == gene){
                 return true;
             }
         }
         return false;
     }
+    
 
     private void create_Segments(int cutPoint1, int cutPoint2, I ind1, I ind2) {
         int capacity_ofSegments = (cutPoint2 - cutPoint1) + 1;
@@ -97,7 +96,7 @@ public class RecombinationOX<I extends IntVectorIndividual, P extends Problem<I>
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "OX";
-    }    
+    }
 }

@@ -327,7 +327,7 @@ public class MainFrame extends JFrame implements GAListener {
                 @Override
                 public Void doInBackground() {
                     try {
-                        int t = 0, numR=0;
+                        int t = 0, numR = 0;
                         for (Request r : agentSearch.getRequests()) {
                             numR++;
                             WarehouseState auxState = state.clone();

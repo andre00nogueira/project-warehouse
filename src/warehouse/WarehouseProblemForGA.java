@@ -10,9 +10,7 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
     private ArrayList<Request> requests;
     private LinkedList<Cell> shelves;
-    //private HashMap<Integer, Pair> pairs;
-    private LinkedList<Pair> pairs;
-
+    private HashMap<String, Pair> pairs;
     private Cell door;
     private int numProducts;
 
@@ -21,12 +19,12 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         shelves = new LinkedList<>(agentSearch.getShelves());
         numProducts = agentSearch.getNumProducts();
         door = agentSearch.getExit();
-        /*pairs = new HashMap<Integer, Pair>();
+        pairs = new HashMap<String, Pair>();
         for (int i = 0; i < agentSearch.getPairs().size(); i++) {
-            pairs.put(i, (Pair) agentSearch.getPairs().get(i));
-        }*/
-        pairs = new LinkedList<>(agentSearch.getPairs());
-
+            Pair pair = (Pair) agentSearch.getPairs().get(i);
+            String key = pair.getCell1().getLine() + "," + pair.getCell1().getColumn() + "-" + pair.getCell2().getLine() + "," + pair.getCell2().getColumn();
+            pairs.put(key, pair);
+        }
     }
 
     @Override
@@ -42,13 +40,6 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         return shelves;
     }
 
-    /*public HashMap<Integer, Pair> getPairs() {
-        return pairs;
-    }*/
-
-    public LinkedList<Pair> getPairs() {
-        return pairs;
-    }
 
     public Cell getDoor() {
         return door;
@@ -59,15 +50,13 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     }
 
     public Pair getPair(Cell first, Cell second) {
-        for (Pair pair : pairs) {
-            if (pair.getCell1().equals(first) && pair.getCell2().equals(second) || pair.getCell1().equals(second) && pair.getCell2().equals(first)){
-        /*for (int i = 0; i < pairs.size(); i++) {
-            Pair pair = pairs.get(i);
-            if (pair.getCell1().equals(first) && pair.getCell2().equals(second) || pair.getCell1().equals(second) && pair.getCell2().equals(first)) {*/
-                return pair;
-            }
+        String key = first.getLine() + "," + first.getColumn() + "-" + second.getLine() + "," + second.getColumn();
+        Pair pair = pairs.get(key);
+        if (pair == null) {
+            key = second.getLine() + "," + second.getColumn() + "-" + first.getLine() + "," + first.getColumn();
+            pair = pairs.get(key);
         }
-        return null;
+        return pair;
     }
 
     @Override

@@ -73,6 +73,9 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         for (int i = 0; i < shelves.size(); i++) {
             //caso exista a shelf na [line, column] verifica se o seu produto é maior que 0 e devolve o int
             if (shelves.get(i).getLine() == line && shelves.get(i).getColumn() == column) {
+                if (genome[i] > problem.getNumProducts()){
+                    return 0;
+                }
                 return genome[i] > 0 ? genome[i] : 0;
             }
         }

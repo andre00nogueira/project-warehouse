@@ -166,6 +166,15 @@ public class WarehouseState extends State implements Cloneable {
         return columnAgent;
     }
 
+
+    public int getLineExit() {
+        return lineExit;
+    }
+
+    public int getColumnExit() {
+        return columnExit;
+    }
+
     @Override
     public boolean equals(Object other) {
         if (!(other instanceof WarehouseState)) {

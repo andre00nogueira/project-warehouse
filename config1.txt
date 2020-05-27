@@ -25,7 +25,7 @@ Mutation probability: 0.3, 0.5
 
 //--------------------------------
 
-Problem file: ./DataSets/puzzle_5.txt
+Problem file: ./DataSets/puzzle_6.txt
 
 //--------------------------------
 

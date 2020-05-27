@@ -23,23 +23,31 @@ public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem
 
         //inicializa o goalState como o estado inicial
         goalState = new WarehouseState(initialWarehouseState.getMatrix());
-        //mete o agente uma célula á direita do objetivo final
-        goalState.setCellAgent(goalPosition.getLine(), goalPosition.getColumn() + 1);
+
+        // se o objectivo é a porta
+        if (goalPosition.getLine() == initialWarehouseState.getLineExit() && goalPosition.getColumn() == initialWarehouseState.getColumnExit()){
+            // mete o agente uma célula no objetivo final
+            goalState.setCellAgent(goalPosition.getLine(), goalPosition.getColumn());
+        }
+        else{
+            // mete o agente uma célula á direita do objetivo final
+            goalState.setCellAgent(goalPosition.getLine(), goalPosition.getColumn() + 1);
+        }
     }
 
     @Override
     public List<S> executeActions(S state) {
-        List<WarehouseState> sucessors = new LinkedList<>();
+        List<S> sucessors = new LinkedList<S>();
         for (Action action : actions) {
             //verifica se a ação é válida
             if (action.isValid(state)) {
                 //se for faz clone e adiciona-a á lista de sucessores
-                WarehouseState sucessor = state.clone();
+                S sucessor = (S) state.clone();
                 action.execute(sucessor);
                 sucessors.add(sucessor);
             }
         }
-        return (List<S>) sucessors;
+        return sucessors;
     }
 
     public boolean isGoal(S state) {

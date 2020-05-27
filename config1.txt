@@ -10,6 +10,7 @@ Selection: tournament
 
 Tournament size: 2,4
 
+
 //--------------------------------
 
 Recombination: pmx, ox, cx

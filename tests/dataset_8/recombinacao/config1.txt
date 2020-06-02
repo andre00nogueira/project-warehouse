@@ -1,8 +1,8 @@
 Runs: 30
 
-Population size: 50, 100, 150
+Population size: 100
 
-Max generations: 100, 300, 600
+Max generations: 1500
 
 //--------------------------------
 

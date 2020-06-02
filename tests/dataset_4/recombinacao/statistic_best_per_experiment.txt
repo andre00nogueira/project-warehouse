@@ -1,0 +1,153 @@
+
+
+Population size:150
+Max generations:100
+Selection:Tournament(4)
+Recombination:PMX
+Recombination prob.: 0.7
+Mutation:Insert
+Mutation prob.: 0.3
+fitness: 5323.0
+shelves: product:
+1-1	empty
+1-3	27
+1-5	25
+1-7	17
+1-9	empty
+2-1	empty
+2-3	2
+2-5	21
+2-7	20
+2-9	empty
+3-1	empty
+3-3	19
+3-5	30
+3-7	4
+3-9	22
+4-1	26
+4-3	24
+4-5	10
+4-7	16
+4-9	23
+7-1	13
+7-3	18
+7-5	15
+7-7	9
+7-9	8
+8-1	29
+8-3	12
+8-5	14
+8-7	7
+8-9	empty
+9-1	empty
+9-3	11
+9-5	5
+9-7	6
+9-9	empty
+10-1	empty
+10-3	28
+10-5	3
+10-7	1
+10-9	empty
+
+
+Population size:150
+Max generations:100
+Selection:Tournament(4)
+Recombination:CX
+Recombination prob.: 0.7
+Mutation:Insert
+Mutation prob.: 0.3
+fitness: 5380.0
+shelves: product:
+1-1	empty
+1-3	empty
+1-5	25
+1-7	30
+1-9	empty
+2-1	empty
+2-3	27
+2-5	18
+2-7	19
+2-9	empty
+3-1	empty
+3-3	26
+3-5	13
+3-7	17
+3-9	23
+4-1	22
+4-3	5
+4-5	10
+4-7	4
+4-9	8
+7-1	2
+7-3	24
+7-5	11
+7-7	14
+7-9	9
+8-1	empty
+8-3	29
+8-5	12
+8-7	15
+8-9	16
+9-1	empty
+9-3	28
+9-5	3
+9-7	21
+9-9	20
+10-1	empty
+10-3	empty
+10-5	7
+10-7	6
+10-9	1
+
+
+Population size:150
+Max generations:100
+Selection:Tournament(4)
+Recombination:OX
+Recombination prob.: 0.7
+Mutation:Insert
+Mutation prob.: 0.3
+fitness: 5480.0
+shelves: product:
+1-1	22
+1-3	11
+1-5	29
+1-7	18
+1-9	5
+2-1	empty
+2-3	27
+2-5	25
+2-7	20
+2-9	8
+3-1	empty
+3-3	26
+3-5	12
+3-7	13
+3-9	1
+4-1	empty
+4-3	24
+4-5	9
+4-7	4
+4-9	16
+7-1	3
+7-3	19
+7-5	10
+7-7	15
+7-9	21
+8-1	empty
+8-3	30
+8-5	14
+8-7	7
+8-9	empty
+9-1	empty
+9-3	23
+9-5	2
+9-7	28
+9-9	empty
+10-1	empty
+10-3	empty
+10-5	17
+10-7	6
+10-9	empty

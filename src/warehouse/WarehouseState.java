@@ -215,7 +215,6 @@ public class WarehouseState extends State implements Cloneable {
 
 
     public double computeTileDistance(WarehouseState state) {
-        //calcula a distância em saltos até goalState
         return Math.abs((lineAgent + 1) - (state.getLineAgent()) + 1) + Math.abs((columnAgent) + 1) - (state.getColumnAgent() + 1);
     }
 
